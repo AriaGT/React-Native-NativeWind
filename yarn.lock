@@ -3388,7 +3388,7 @@ expo-asset@~11.1.7:
     "@expo/image-utils" "^0.7.6"
     expo-constants "~17.1.7"
 
-expo-constants@~17.1.7:
+expo-constants@^17.1.7, expo-constants@~17.1.7:
   version "17.1.7"
   resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-17.1.7.tgz#35194c1cef51f1ea756333418f1e077be79a012b"
   integrity sha512-byBjGsJ6T6FrLlhOBxw4EaiMXrZEn/MlUYIj/JAd+FS7ll5X/S4qVRbIimSJtdW47hXMq0zxPfJX6njtA56hHA==
@@ -3412,6 +3412,14 @@ expo-keep-awake@~14.1.4:
   version "14.1.4"
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-14.1.4.tgz#80197728563e0e17523e5a606fbd6fbed9639503"
   integrity sha512-wU9qOnosy4+U4z/o4h8W9PjPvcFMfZXrlUoKTMBW7F4pLqhkkP/5G4EviPZixv4XWFMjn1ExQ5rV6BX8GwJsWA==
+
+expo-linking@^7.1.7:
+  version "7.1.7"
+  resolved "https://registry.yarnpkg.com/expo-linking/-/expo-linking-7.1.7.tgz#8e41ef1ca5d1190dfc01b7f4dbc4c3993bdc4523"
+  integrity sha512-ZJaH1RIch2G/M3hx2QJdlrKbYFUTOjVVW4g39hfxrE5bPX9xhZUYXqxqQtzMNl1ylAevw9JkgEfWbBWddbZ3UA==
+  dependencies:
+    expo-constants "~17.1.7"
+    invariant "^2.2.4"
 
 expo-modules-autolinking@2.1.14:
   version "2.1.14"
@@ -5591,6 +5599,11 @@ react-fast-compare@^3.2.2:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.2.tgz#929a97a532304ce9fee4bcae44234f1ce2c21d49"
   integrity sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==
 
+react-freeze@^1.0.0:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-freeze/-/react-freeze-1.0.4.tgz#cbbea2762b0368b05cbe407ddc9d518c57c6f3ad"
+  integrity sha512-r4F0Sec0BLxWicc7HEyo2x3/2icUTrRmDjaaRyzzn+7aDyFZliszMDOgLVwSnQnYENOlL1o569Ze2HZefk8clA==
+
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -5628,7 +5641,7 @@ react-native-is-edge-to-edge@1.1.7:
   resolved "https://registry.yarnpkg.com/react-native-is-edge-to-edge/-/react-native-is-edge-to-edge-1.1.7.tgz#28947688f9fafd584e73a4f935ea9603bd9b1939"
   integrity sha512-EH6i7E8epJGIcu7KpfXYXiV2JFIYITtq+rVS8uEb+92naMRBdxhTuS8Wn2Q7j9sqyO0B+Xbaaf9VdipIAmGW4w==
 
-react-native-is-edge-to-edge@^1.1.6:
+react-native-is-edge-to-edge@^1.1.6, react-native-is-edge-to-edge@^1.1.7:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-native-is-edge-to-edge/-/react-native-is-edge-to-edge-1.2.1.tgz#64e10851abd9d176cbf2b40562f751622bde3358"
   integrity sha512-FLbPWl/MyYQWz+KwqOZsSyj2JmLKglHatd3xLZWskXOpRaio4LfEDEz8E/A6uD8QoTHW6Aobw1jbEwK7KMgR7Q==
@@ -5655,6 +5668,15 @@ react-native-safe-area-context@5.4.0:
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-5.4.0.tgz#04b51940408c114f75628a12a93569d30c525454"
   integrity sha512-JaEThVyJcLhA+vU0NU8bZ0a1ih6GiF4faZ+ArZLqpYbL6j7R3caRqj+mE3lEtKCuHgwjLg3bCxLL1GPUJZVqUA==
+
+react-native-screens@~4.11.1:
+  version "4.11.1"
+  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-4.11.1.tgz#7d0f3d313d8ddc1e55437c5e038f15f8805dc991"
+  integrity sha512-F0zOzRVa3ptZfLpD0J8ROdo+y1fEPw+VBFq1MTY/iyDu08al7qFUO5hLMd+EYMda5VXGaTFCa8q7bOppUszhJw==
+  dependencies:
+    react-freeze "^1.0.0"
+    react-native-is-edge-to-edge "^1.1.7"
+    warn-once "^0.1.0"
 
 react-native@0.79.5:
   version "0.79.5"
@@ -6788,7 +6810,7 @@ walker@^1.0.7, walker@^1.0.8:
   dependencies:
     makeerror "1.0.12"
 
-warn-once@^0.1.1:
+warn-once@^0.1.0, warn-once@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/warn-once/-/warn-once-0.1.1.tgz#952088f4fb56896e73fd4e6a3767272a3fccce43"
   integrity sha512-VkQZJbO8zVImzYFteBXvBOZEl1qL175WH8VmZcxF2fZAoudNhNDvHi+doCaAEdU2l2vtcIwa2zn0QK5+I1HQ3Q==
